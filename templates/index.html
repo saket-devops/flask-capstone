@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Academic Performance Predictor</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="G:/Work Profile/Flask/Capstone Project - I/static/css/main.css" />
+		<link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="/home">Academic Performance Predictor</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="/home"> Home </a></li>
+					<li><a href="/form"> Form </a></li>
+					<li><a href="/model"> Predict </a></li>
+					<li><a href="/about"> About Us </a></li>
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<h1>Academic Performance Predictor</h1>
+					<p> You can predict your future score.</p>
+				</div>
+				<video autoplay loop muted playsinline src="static/images/banner.mp4"></video>
+			</section>
+
+		<!-- Highlights -->
+			<section class="wrapper">
+				<div class="inner">
+					<header class="special">
+						<h2>Welcome to Our Website</h2>
+						<p>Academic Performance Predictor </p>
+					</header>
+					<div class="highlights">
+						<section>
+							<div class="content">
+								<header>
+									<a href="#" class="icon fa-vcard-o"><span class="label">Icon</span></a>
+									<h3>Front End</h3>
+								</header>
+								<p>we use Front end to develop this website like HTML, Css</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="#" class="icon fa-files-o"><span class="label">Icon</span></a>
+									<h3>Back end </h3>
+								</header>
+								<p>We use back end also to connect client to server.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="#" class="icon fa-floppy-o"><span class="label">Icon</span></a>
+									<h3>Machine Learning</h3>
+								</header>
+								<p>Used multiple algorithms to calculate academic secore</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="#" class="icon fa-line-chart"><span class="label">Icon</span></a>
+									<h3>Data Cleaning</h3>
+								</header>
+								<p>Clean the data that we got from google form used multiple software to clean the data</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="#" class="icon fa-paper-plane-o"><span class="label">Icon</span></a>
+									<h3>Flask</h3>
+								</header>
+								<p>Used python framework to connect Server to client</p>
+							</div>
+						</section>
+						
+					</div>
+				</div>
+			</section>
+
+
+		<!-- CTA -->
+			<section id="cta" class="wrapper">
+				<div class="inner">
+					<h2>Breief Description</h2>
+					<p>  Bascially this website combined differnt differnt approches like Machine Learning , Python framework , Bigdata and front end and tell user to there future
+					academic secore. it would helpfull for student and they can observe where they need to improve accoding to there records</p>
+				</div>
+			</section>
+
+	
+			
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+			<script src="{{url_for('static', filename='js/browser.min.js')}}"></script>
+			<script src="{{url_for('static', filename='js/breakpoints.min.js')}}"></script>
+			<script src="{{url_for('static', filename='js/util.js')}}"></script>
+			<script src="{{url_for('static', filename='js/main.js')}}"></script>
+
+		
+	</body>
+	<style>
+		#cta {
+			background-color: #ce1b28;
+			color: rgba(255, 255, 255, 0.75);
+			background-attachment: fixed;
+			background-image: linear-gradient(rgba(206, 27, 40, 0.25), rgba(206, 27, 40, 0.25)), url(/../../static/images/cta01.jpg);
+			background-position: bottom;
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: relative;
+			text-align: center;
+			z-index: 1;
+		}
+	
+		body {
+			padding-top: 3.25rem;
+		}
+	
+		body:before {
+			content: ' ';
+			background-image: url(../../static/images/bg.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			display: block;
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			opacity: 0.05;
+		}
+	</style>
+</html>

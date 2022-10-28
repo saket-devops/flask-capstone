@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Academic Performance Predictor</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<meta name="description" content=""/>
+		<meta name="keywords" content=""/>
+		<link rel="stylesheet" href="{{url_for('static',filename='css/font-awesome.min.css')}}" />
+		<link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="/home">Academic Performance Predictor</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="/home"> Home </a></li>
+					<li><a href="/form"> Form </a></li>
+					<li><a href="/model"> Predict </a></li>
+					<li><a href="/about"> About Us </a></li>
+				</ul>
+			</nav>
+
+		<!-- Heading -->
+			<div id="heading" >
+				<h1>Prediction Model</h1>
+			</div>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<div class="content">
+
+					<!-- Elements -->
+						<div class="row">
+							<div class="col-12 col-12-medium">
+
+
+								<!-- Form -->
+									<h3>Form</h3>
+									<form method="post" action="/calc">
+										<div class="row gtr-uniform">
+											
+											<!-- Break -->
+										<div>
+											<label> Attendance </label>
+											<div class="col-12 col-12-small">
+												<input type="radio" id="att1" name="Attendance" value="0" required>
+												<label for="att1">Less than 75</label>
+											</div>
+											<div class="col-12 col-12-small">
+												<input type="radio" id="att2" name="Attendance" value="1">
+												<label for="att2">Between 75-80</label>
+											</div>
+											<div class="col-4 col-12-small">
+												<input type="radio" id="att3" name="Attendance" value="2">
+												<label for="att3">Between 80-90</label>
+											</div>
+											<div class="col-4 col-12-small">
+												<input type="radio" id="att4" name="Attendance" value="3">
+												<label for="att4">More than 90</label>
+											</div>
+										</div>
+										<div>
+												<label> Study Pattern</label>
+												<div class="col-12 col-12-small">
+													<input type="radio" id="study1" name="Study" value="0" required>
+													<label for="study1">Night Before Exam</label>
+												</div>
+												<div class="col-12 col-12-small">
+													<input type="radio" id="study2" name="Study" value="1">
+													<label for="study2">A bit daily</label>
+												</div>
+										</div>
+										<div>
+												<label> On an AVG hours you study </label>
+												<div class="col-12 col-12-small">
+													<input type="radio" id="avgstu1" name="avgstu" value="1" required>
+													<label for="avgstu1">0-1 Hour</label>
+												</div>
+												<div class="col-12 col-12-small">
+													<input type="radio" id="avgstu2" name="avgstu" value="2">
+													<label for="avgstu2">1-2 Hours</label>
+												</div>
+												<div class="col-4 col-12-small">
+													<input type="radio" id="avgstu3" name="avgstu" value="3">
+													<label for="avgstu3">2-3 Hours</label>
+												</div>
+												<div class="col-4 col-12-small">
+													<input type="radio" id="avgstu4" name="avgstu" value="4">
+													<label for="avgstu4">3-4 Hours</label>
+												</div>
+												<div class="col-4 col-12-small">
+													<input type="radio" id="avgstu5" name="avgstu" value="5">
+													<label for="avgstu5">4-5 Hours</label>
+													</div>
+												<div class="col-4 col-12-small">
+													<input type="radio" id="avgstu6" name="avgstu" value="6">
+													<label for="avgstu6">5-6 Hours</label>
+													</div>
+												<div class="col-4 col-12-small">
+													<input type="radio" id="avgstu7" name="avgstu" value="7">
+													<label for="avgstu7">More than 6</label>
+													</div>
+											</div>
+											<div>
+													<label> No of Holidays </label>
+													<div class="col-12 col-12-small">
+														<input type="radio" id="holiday1" name="holiday" value="0" required>
+														<label for="holiday1">Less than 10 Days</label>
+													</div>
+													<div class="col-12 col-12-small">
+														<input type="radio" id="holiday2" name="holiday" value="1">
+														<label for="holiday2">10-20 Days</label>
+													</div>
+													<div class="col-12 col-12-small">
+														<input type="radio" id="holiday3" name="holiday" value="2">
+														<label for="holiday3">More than 20 Days</label>
+														</div>
+											</div>
+											<div>
+													<label> Hostel </label>
+													<div class="col-12 col-12-small">
+														<input type="radio" id="hostel1" name="hostel" value="1" required>
+														<label for="hostel1">Yes</label>
+													</div>
+													<div class="col-12 col-12-small">
+														<input type="radio" id="hostel2" name="hostel" value="0" >
+														<label for="hostel2">No</label>
+													</div>
+											</div>
+											<div>
+													<label> Mess </label>
+													<div class="col-12 col-12-small">
+														<input type="radio" id="mess1" name="mess" value="1" required>
+														<label for="mess1">Yes</label>
+													</div>
+													<div class="col-12 col-12-small">
+														<input type="radio" id="mess2" name="mess" value="0">
+														<label for="mess2">No</label>
+													</div>
+											</div>
+											<div>
+													<label> Drinking/Smoking </label>
+													<div class="col-12 col-12-small">
+														<input type="radio" id="drin1" name="drin" value="1" required>
+														<label for="drin1">Yes</label>
+													</div>
+													<div class="col-12 col-12-small">
+														<input type="radio" id="drin2" name="drin" value="0">
+														<label for="drin2">No</label>
+													</div>
+											</div>
+											<div>
+													<label> RelationShip </label>
+													<div class="col-12 col-12-small">
+														<input type="radio" id="relation1" name="relation" value="1" required >
+														<label for="relation1">Yes</label>
+													</div>
+													<div class="col-12 col-12-small">
+														<input type="radio" id="relation2" name="relation" value="0">
+														<label for="relation2">No</label>
+													</div>
+											</div>
+											<div>
+													<label> Education Loan </label>
+													<div class="col-12 col-12-small">
+														<input type="radio" id="edu1" name="edu" value="1" required>
+														<label for="edu1">Yes</label>
+													</div>
+													<div class="col-12 col-12-small">
+														<input type="radio" id="edu2" name="edu" value="0">
+														<label for="edu2">No</label>
+													</div>
+											</div>
+											<div>
+													<label> Parental Pressure </label>
+													<div class="col-12 col-12-small">
+														<input type="radio" id="parent1" name="parent" value="1" required>
+														<label for="parent1">Yes</label>
+													</div>
+													<div class="col-12 col-12-small">
+														<input type="radio" id="parent2" name="parent" value="0">
+														<label for="parent2">No</label>
+													</div>
+											</div>
+											<div>
+													<label> Physical Activity </label>
+													<div class="col-12 col-12-small">
+														<input type="radio" id="phy1" name="phy" value="1" required>
+														<label for="phy1">Yes</label>
+													</div>
+													<div class="col-12 col-12-small">
+														<input type="radio" id="phy2" name="phy" value="0">
+														<label for="phy2">No</label>
+													</div>
+											</div>
+											<div>
+													<label> Average time to College club or any activity </label>
+													<div class="col-12 col-12-small">
+														<input type="radio" id="club1" name="club" value="0" required>
+														<label for="club1">0 Hour</label>
+													</div>
+													<div class="col-12 col-12-small">
+														<input type="radio" id="club2" name="club" value="1">
+														<label for="club2">1 Hours</label>
+													</div>
+													<div class="col-4 col-12-small">
+														<input type="radio" id="club3" name="club" value="2">
+														<label for="club3">2 Hours</label>
+													</div>
+													<div class="col-4 col-12-small">
+														<input type="radio" id="club4" name="club" value="3">
+														<label for="club4">3 Hours</label>
+													</div>
+													<div class="col-4 col-12-small">
+														<input type="radio" id="club5" name="club" value="4">
+														<label for="club5">4 Hours</label>
+														</div>
+													<div class="col-4 col-12-small">
+														<input type="radio" id="club6" name="club" value="5">
+														<label for="club6">More than 4</label>
+														</div>
+											</div>
+											<div>
+													<label> Social Media Usage </label>
+													<div class="col-12 col-12-small">
+														<input type="radio" id="media1" name="media" value="2" required>
+														<label for="media1">1-2 Hour</label>
+													</div>
+													<div class="col-12 col-12-small">
+														<input type="radio" id="media2" name="media" value="3">
+														<label for="media2">2-3 Hours</label>
+													</div>
+													<div class="col-4 col-12-small">
+														<input type="radio" id="media3" name="media" value="4">
+														<label for="media3">3-4 Hours</label>
+													</div>
+													<div class="col-4 col-12-small">
+														<input type="radio" id="media4" name="media" value="5">
+														<label for="media4">4-5 Hours</label>
+													</div>
+													<div class="col-4 col-12-small">
+														<input type="radio" id="media5" name="media" value="6">
+														<label for="media5">More than 5</label>
+														</div>
+											</div>
+											
+
+											
+											<!-- Break -->
+											<div class="col-12">
+												<ul class="actions">
+													<li><input type="submit" value="Submit Form" class="primary" /></li>
+													<li><input type="reset" value="Reset" /></li>
+												</ul>
+											</div>
+										</div>
+									</form>
+									{% if(cgpa!=None) %}
+									<div>
+										<h4><b>Your Predicted CGPA is {{cgpa}}</b></h4>
+									</div>
+									{% endif %}
+								
+        
+		<!-- Scripts -->
+			<script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+			<script src="{{url_for('static', filename='js/browser.min.js')}}"></script>
+			<script src="{{url_for('static', filename='js/breakpoints.min.js')}}"></script>
+			<script src="{{url_for('static', filename='js/util.js')}}"></script>
+			<script src="{{url_for('static', filename='js/main.js')}}"></script>
+	</body>
+	<style>
+          body {
+               padding-top: 3.25rem; }
+               body:before {
+               content: ' ';
+               background-image: url(../../static/images/bg.jpg);
+               background-size: cover;
+               background-repeat: no-repeat;
+               background-attachment: fixed;
+               display: block;
+               position: fixed;
+               left: 0;
+               top: 0;
+               width: 100%;
+               height: 100%;
+               z-index: -1;
+			   opacity: 0.05;
+			   }
+	</style>
+</html>

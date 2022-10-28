@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Academic Performance Predictor</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="G:/Work Profile/Flask/Capstone Project - I/static/css/main.css" />
+		<link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="/home">Academic Performance Predictor</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="/home"> Home </a></li>
+					<li><a href="/form"> Form </a></li>
+					<li><a href="/model"> Predict </a></li>
+					<li><a href="/about"> About Us </a></li>
+				</ul>
+			</nav>
+
+		<!-- Heading -->
+			<div id="heading" >
+				<h1>Google Form</h1>
+			</div>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<div class="content">
+						<header>
+							<h2>Google Form</h2>
+						</header>
+						<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeyqkjAuUvY_ScnffcdICcdVcW1deM56gnubbGDsePXtlRGHw/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+					</div>
+				</div>
+			</section>
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			
+			<script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+			<script src="{{url_for('static', filename='js/browser.min.js')}}"></script>
+			<script src="{{url_for('static', filename='js/breakpoints.min.js')}}"></script>
+			<script src="{{url_for('static', filename='js/util.js')}}"></script>
+			<script src="{{url_for('static', filename='js/main.js')}}"></script>
+
+	</body>
+	<style>
+		body {
+			 padding-top: 3.25rem; }
+			 body:before {
+			 content: ' ';
+			 background-image: url(../../static/images/bg.jpg);
+			 background-size: cover;
+			 background-repeat: no-repeat;
+			 background-attachment: fixed;
+			 display: block;
+			 position: fixed;
+			 left: 0;
+			 top: 0;
+			 width: 100%;
+			 height: 100%;
+			 z-index: -1;
+			 opacity: 0.05;
+			 }
+  </style>
+</html>
